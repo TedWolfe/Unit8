@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+	<meta name="author" content="" />
+
+	<title>Tip Calculator</title>
+</head>
+
+<body>
+
+<h2>Unit 8 - Exercise 5:</h2>
+<p />
+Implement a web page that performs tip calculations.  At a minimum, you need input type for original cost and one for tip rate.  <br />Use <i>input type="number"</i> to make processing easier.
+
+<p />
+<hr />
+<p />
+
+<script>
+
+function getTip() {
+          
+  var bill = document.getElementById("tbill").value;
+  var rate = document.getElementById("trate").value;
+  var tip = ((bill * rate) / 100).toFixed(2);
+  var ttotal = (parseFloat(bill) + parseFloat(tip)).toFixed(2);
+
+ document.getElementById("result").innerHTML =
+                 
+ '<p />The subtotal amount is: <b>' + bill + '</b>' +
+ '<br />The tip percentage is: <b>' + rate + '\u0025' + '</b>' +
+ '<p />The tip you should offer is: <b>' + tip + '</b>' + 
+ '<p />For a grand total of: $<b>' + ttotal + "</b>.";
+                
+}
+
+</script>
+
+<table>
+  <tr>
+    <td valign="top">
+      <b>Enter total amount of check:</b>
+    </td>
+
+    <td valign="top">
+      <input type="number" value="10.00" style="text-align:center;" id="tbill" />
+    </td>
+  </tr>
+
+  <tr>
+    <td valign="top">
+      <b>Enter percentage you'd like to tip:</b>
+    </td>
+
+    <td valign="top">
+      <input type="number" value="20" style="text-align:center;" id="trate" />
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+    </td>
+    <td>
+     <center><button id="calc" onclick="getTip()">Calculate</button></center> 
+    </td>
+  </tr>
+  
+  </table>
+  
+  <p />
+  <hr />
+  <p />
+  
+<table>
+  <tr>
+  <td id="result" />
+
+  </tr>
+</table>
+
+<hr />
+
+</body>
+</html>

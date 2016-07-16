@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <title>JavaScript Temperature Converter</title>
+  </head>
+  <body>
+<!-- Old way --
+    <h1>Temperature Conversion</h1>
+    <p>
+      <input type="text" id="temperature" />
+      <input type="button" id="f_to_c" value="F to C" />
+      <input type="button" id="c_to_f" value="C to F" />
+    </p>
+    <p id="result"></p>
+    <script src="temperature.js"></script>
+-->
+
+<h2>Unit 8 Exercise 3:  Use different button element.</h2>
+<hr />
+<p />
+<h3>Temperature Conversion</h3>
+<p />
+
+<input type="text" size="3" style="text-align:center;" value="32" id="temperature" />
+<button id="f_to_c">F to C</button>
+<button id="c_to_f">C to F</button>
+
+<hr />
+<p />
+
+<p id="result"></p>
+
+<script src="temperature.js"></script>
+
+<hr />
+<p />
+
+<b>(a.)</b>&nbsp; &nbsp;Except for the HTML parameters, nothing else needed to be changed.  The html "value" became the text of the button, but nothing else needed to be done.
+<p />
+<b>(b.)</b>&nbsp; &nbsp;The biggest difference on how you define the button element comes from the fact that you can insert HTML in the "button" element.  This has lead to some compatibility problems with earlier version of IE, but they seem to be resolved now.
+<p />
+
+  </body>
+</html>
